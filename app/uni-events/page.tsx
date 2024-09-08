@@ -1,20 +1,19 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Card from "../components/card";
 
 const EventPage = () => {
-  const [result, setResult] = useState([]);
-  const [error, setError]: any = useState("");
+  const [result, setResult]: any = useState([]);
+  const [error, setError]: any = useState(null);
+
   useEffect(() => {
     async function fetchEvents() {
       try {
-        // Call the local Python API running on port 5000
-        const response = await fetch("/publicEvents.json");
+        const response = await fetch("/uniEvents.json");
         const data = await response.json();
+        console.log("data==", data);
         setResult(data);
-        console.log(data);
       } catch (err) {
         setError(err);
       }
@@ -35,6 +34,11 @@ const EventPage = () => {
         </div>
       ))}
     </div>
+    // <div className={styles.cardContainer}>
+    //   {result?.map((event: any, index: any) => (
+    //     <Card event={event} key={index} />
+    //   ))}
+    // </div>
   );
 };
 
