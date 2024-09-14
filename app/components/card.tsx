@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./card.module.css";
-import EventFormData from "../lib/eventFormData";
+import EventFormData from "../interface/eventFormData";
 
 interface Props {
   event: EventFormData;

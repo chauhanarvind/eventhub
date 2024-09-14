@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Card from "../components/card";
-import EventFormData from "../lib/eventFormData";
+import EventFormData from "../interface/eventFormData";
 
 const EventPage = () => {
   const [result, setResult] = useState<EventFormData[]>([]);

@@ -1,4 +1,4 @@
-import EventFormData from "../lib/eventFormData";
+import EventFormData from "../interface/eventFormData";
 import mongoose from "mongoose";
 import { Document } from "mongoose";
 
@@ -10,21 +10,9 @@ const UniEventSchema = new mongoose.Schema<EventDocument>({
   location: { type: String, required: true },
   time: { type: String, required: true }, // Make sure time is a string in ISO format
   source: { type: String, required: true },
-  imageUrl: {
-    type: String,
-    default: null, // Can be null or a string
-    required: false,
-  },
-  category: {
-    type: String,
-    default: null, // Can be null or a string
-    required: false,
-  },
-  link: {
-    type: String,
-    default: null, // Can be null or a string
-    required: false,
-  },
+  imageUrl: { type: String, required: false },
+  category: { type: String, required: false },
+  link: { type: String, required: false },
 });
 
 const Event =

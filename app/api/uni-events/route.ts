@@ -2,7 +2,7 @@ import dbConnect from "@/app/lib/mongodb";
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import Event from "../../models/uni-events";
-import EventFormData from "@/app/lib/eventFormData";
+import EventFormData from "@/app/interface/eventFormData";
 
 export async function POST(req: Request) {
   await dbConnect();
