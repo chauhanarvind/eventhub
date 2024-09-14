@@ -24,14 +24,14 @@ const EventPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.cardContainer}>
       {result.map((item: any, resultIndex: any) => (
         <div className={styles.category} key={resultIndex}>
-          <h3>{item.name}</h3>
-          <hr></hr>
-          <div className={styles.cardContainer}>
-            <Card item={item} />
-          </div>
+          {/* <h3>{item.name}</h3> */}
+          {/* <hr></hr> */}
+          {/* <div className={styles.cardContainer}> */}
+          <Card event={item} />
+          {/* </div> */}
         </div>
       ))}
     </div>

@@ -5,7 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import eventFormData from "@/app/lib/eventFormData";
 
-const Create = () => {
+const Page = () => {
   const [formData, setFormData] = useState<eventFormData>({
     name: "",
     description: "",
@@ -136,4 +136,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default Page;
